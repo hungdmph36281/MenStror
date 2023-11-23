@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Colo Shop</title>
+    <title>Trang chu</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Colo Shop Template">
@@ -63,12 +63,14 @@
                     <div class="row">
                         <div class="col-lg-12 text-right">
                             <div class="logo_container">
-                                <a href="#">colo<span>shop</span></a>
+                                <a href="#">Men<span>Strore</span></a>
                             </div>
                             <nav class="navbar">
                                 <ul class="navbar_menu">
                                     <li><a href="#">Trang chủ</a></li>
-                                    <li><a href="#">Danh muc</a></li>
+                                    <li><a href="#">Áo Nam</a></li>
+                                    <li><a href="#">Quần Nam</a></li>
+                                    <li><a href="#">Phụ Kiện</a></li>
                                     <li><a href="#">Bài viết</a></li>
                                     <li><a href="#">Giới thiệu</a></li>
                                 </ul>

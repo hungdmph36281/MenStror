@@ -135,7 +135,7 @@
                     <a href="index.html" class="logo text-center">
                         <span class="logo-lg">
                            <a href="index.php">
-                           <img src="..\assets\images\users\logo2.png" alt="user-image" class="rounded-circle" width="150px" height="150px">
+                           <img src="assets\images\users\logo2.png" class="rounded-circle" width="150px" height="120px">
     
                            </a>
                           
@@ -190,7 +190,7 @@
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="apps-calendar.html">Danh sách sản phẩm</a>
+                                        <a href="index.php?act=listsp">Danh sách sản phẩm</a>
                                     </li>
                                     <li>
                                         <a href="index.php?act=addsp">Thêm danh sản phẩm</a>
