@@ -14,6 +14,20 @@
     <link rel="stylesheet" type="text/css" href="./views/plugins/OwlCarousel2-2.2.1/animate.css">
     <link rel="stylesheet" type="text/css" href="./views/styles/main_styles.css">
     <link rel="stylesheet" type="text/css" href="./views/styles/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- <style>
+        h6 {
+            color: whitesmoke;
+            font-size: 20;
+            font-family: bold;
+        }
+
+        h1 {
+            font-family: bold;
+            color: whitesmoke;
+        }
+        
+    </style> -->
 </head>
 
 <body>
@@ -35,9 +49,7 @@
                         <div class="col-md-6 text-right">
                             <div class="top_nav_right">
                                 <ul class="top_nav_menu">
-
                                     <!-- Currency / Language / My Account -->
-
 
                                     <li class="account">
                                         <a href="#">
@@ -67,15 +79,20 @@
                             </div>
                             <nav class="navbar">
                                 <ul class="navbar_menu">
-                                    <li><a href="#">Trang chủ</a></li>
+                                    <li><a href="index.php">Trang chủ</a></li>
                                     <li><a href="#">Áo Nam</a></li>
                                     <li><a href="#">Quần Nam</a></li>
                                     <li><a href="#">Phụ Kiện</a></li>
-                                    <li><a href="#">Bài viết</a></li>
                                     <li><a href="#">Giới thiệu</a></li>
                                 </ul>
                                 <ul class="navbar_user">
-                                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                    <li>
+                                    <form action="index.php?act=categories.php" method="post">
+                                        <input type="text" name="kyw">
+                                        <input style="padding:1px 10px" class="btn-primary" type="submit" name="timkiem" value="Tìm kiếm">
+                                    </form></li>
+                                    </li>
+
                                     <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                                     <li class="checkout">
                                         <a href="#">

@@ -11,7 +11,7 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="index.php">Trang chủ admin</a></li>
-                                <li class="breadcrumb-item active">Thêm danh mục</li>
+                                <li class="breadcrumb-item active">Danh sách sản phẩm</li>
                             </ol>
                         </div>
                         <h3 class="page-title">DANH SÁCH SẢN PHẨM</h3>
@@ -25,18 +25,7 @@
             <div class="card shadow mb-4">
                 <div class="card-body">
                     <div class="table-responsive">
-                    <form action="index.php?act=lissp" method="post">
-                <input type="text" name="kyw">
-                <select name="iddm" >
-                    <option value="0" selected>Tât cả</option>
-                    <?php
-                        foreach ($listdanhmuc as $danhmuc){
-                            extract($danhmuc);
-                            echo '<option value="'.$id.'">'.$name.'</option>';
-                        }
-                    ?>
-                </select>
-                <input class="btn-primary" type="submit" name="listok" value="GO">
+                    <form action="index.php?act=litssp" method="post">
             </form>
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
@@ -58,7 +47,7 @@
             extract($sanpham);
             $suasp = "index.php?act=suasp&id=".$id;
             $xoasp = "index.php?act=xoasp&id=".$id;
-            $hinhpath = "../upload/" .$img;
+            $hinhpath = "../views/images/".$img;
             if(is_file($hinhpath)){
                 $hinh="<img src='".$hinhpath."' height = '80'>";
             }else{

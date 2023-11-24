@@ -30,7 +30,7 @@
 						<p>Chào mừng đến với shop của chúng tôi</p> 
 						<p>Địa chỉ: Nhổn-Bắc Từ Niêm-Hà Nội</p>
 						
-						<div class="cr">©2018 All Rights Reserverd. Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">Colorlib</a> &amp; distributed by <a href="https://themewagon.com">ThemeWagon</a></div>
+						<div class="cr">©2023 All Rights Reserverd. Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">Colorlib</a> &amp; distributed by <a href="https://themewagon.com">ThemeWagon</a></div>
 					</div>
 				</div>
 			</div>
