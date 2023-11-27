@@ -205,7 +205,7 @@
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="apps-calendar.html">Danh sách tài khoản</a>
+                                        <a href="index.php?act=dskh">Danh sách tài khoản</a>
                                     </li>
                                 </ul>
                             </li>

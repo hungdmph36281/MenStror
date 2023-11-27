@@ -32,6 +32,10 @@
 
 <body>
 
+    <?php
+
+    $dmsp = loadall_danhmuc();
+    ?>
     <div class="super_container">
 
         <!-- Header -->
@@ -49,18 +53,47 @@
                         <div class="col-md-6 text-right">
                             <div class="top_nav_right">
                                 <ul class="top_nav_menu">
-                                    <!-- Currency / Language / My Account -->
 
-                                    <li class="account">
-                                        <a href="#">
-                                            My Account
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                        <ul class="account_selection">
-                                            <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-                                            <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
-                                        </ul>
-                                    </li>
+                                    <!-- Currency / Language / My Account -->
+                                    <?php
+                                    if (isset($_SESSION['user'])) {
+                                        $user = $_SESSION['user'];
+                                    ?>
+                                        <li class="account">
+                                            <a href="#">
+                                                Xin chào
+                                                <?= $user['user'] ?>
+                                            </a>
+                                            <ul class="account_selection">
+
+                                                <li><a href="index.php?act=edit_taikhoan"><i class="fa fa-user-plus" aria-hidden="true"></i>Thông tin</a></li>
+                                                <?php
+                                                if ($user['role'] == 1) {
+                                                ?>
+                                                    <li><a href="admin"><i class="fa fa-user-plus" aria-hidden="true"></i>Admin</a></li>
+                                                <?php } ?>
+                                                <li><a href="index.php?act=thoat"><i class="fa fa-user-plus" aria-hidden="true"></i>Đăng xuất</a></li>
+                                            </ul>
+                                        </li>
+
+                                    <?php
+
+                                    } else {
+                                    ?>
+
+                                        <li class="account">
+                                            <a href="#">
+                                                My Account
+                                                <i class="fa fa-angle-down"></i>
+                                            </a>
+                                            <ul class="account_selection">
+                                                <li><a href="index.php?act=dangnhap"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+                                                <li><a href="index.php?act=dangky"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+                                            </ul>
+                                        </li>
+                                    <?php
+                                    }
+                                    ?>
                                 </ul>
                             </div>
                         </div>
@@ -80,24 +113,24 @@
                             <nav class="navbar">
                                 <ul class="navbar_menu">
                                     <li><a href="index.php">Trang chủ</a></li>
-                                    <li><a href="#">Áo Nam</a></li>
-                                    <li><a href="#">Quần Nam</a></li>
-                                    <li><a href="#">Phụ Kiện</a></li>
+                                    <li><a href="index.php?act=categories&iddm=40">Áo Nam</a></li>
+                                    <li><a href="index.php?act=categories&iddm=34">Quần Nam</a></li>
+                                    <li><a href="index.php?act=categories&iddm=33">Phụ Kiện</a></li>
                                     <li><a href="#">Giới thiệu</a></li>
                                 </ul>
                                 <ul class="navbar_user">
                                     <li>
-                                    <form action="index.php?act=categories.php" method="post">
-                                        <input type="text" name="kyw">
-                                        <input style="padding:1px 10px" class="btn-primary" type="submit" name="timkiem" value="Tìm kiếm">
-                                    </form></li>
+                                        <form action="index.php?act=categories.php" method="post">
+                                            <input type="text" name="kyw">
+                                            <input style="padding:1px 10px" class="btn-primary" type="submit" name="timkiem" value="Tìm kiếm">
+                                        </form>
+                                    </li>
                                     </li>
 
                                     <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                                     <li class="checkout">
                                         <a href="#">
                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                            <span id="checkout_items" class="checkout_items">2</span>
                                         </a>
                                     </li>
                                 </ul>
