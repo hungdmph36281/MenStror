@@ -14,9 +14,9 @@
         <link href="..\assets\libs\jquery-vectormap\jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
 
         <!-- App css -->
-        <link href="..\assets\css\bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href="..\assets\css\icons.min.css" rel="stylesheet" type="text/css">
-        <link href="..\assets\css\app.min.css" rel="stylesheet" type="text/css">
+        <link href=".\assets\css\bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href=".\assets\css\icons.min.css" rel="stylesheet" type="text/css">
+        <link href=".\assets\css\app.min.css" rel="stylesheet" type="text/css">
 
     </head>
 
@@ -205,7 +205,7 @@
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="apps-calendar.html">Danh sách tài khoản</a>
+                                        <a href="index.php?act=dskh">Danh sách tài khoản</a>
                                     </li>
                                 </ul>
                             </li>
