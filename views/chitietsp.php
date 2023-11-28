@@ -167,9 +167,9 @@
 			<div class="col">
 				<div class="tabs_container">
 					<ul class="tabs d-flex flex-sm-row flex-column align-items-left align-items-md-center justify-content-center">
-						<!-- <li class="tab active" data-active-tab="tab_1"><span>Sản phẩm cùng loại</span></li> -->
+						<!-- <li class="tab active" data-active-tab="tab_1"><span>Sản phẩm cùng loại</span></li>  -->
 
-						<!-- <li class="tab" data-active-tab="tab_3"><span>BÌNH LUẬN</span></li> -->
+						<!-- <li class="tab" data-active-tab="tab_3"><span><a href="">Bình luận</a></span></li> -->
 					</ul>
 				</div>
 			</div>
@@ -181,6 +181,7 @@
 			<div class="col">
 
 				<!-- Tab Description -->
+				
 
 				<div id="tab_1" class="tab_container active">
 					<div class="row">
@@ -243,7 +244,7 @@
 									<h4>Reviews (2)</h4>
 								</div>
 
-								<!-- User Review -->
+								 User Review -->
 				<!-- 
 								<div class="user_review_container d-flex flex-column flex-sm-row">
 									<div class="user">
@@ -316,7 +317,7 @@
 									</form>
 								</div>
 
-							</div> --> -->
+							</div> --> 
 
 			</div>
 		</div>

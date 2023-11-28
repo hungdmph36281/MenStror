@@ -1,3 +1,44 @@
+
+    <style>
+    .ah {
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .ah form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ah input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .ah button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .ah button:hover {
+        background-color: #45a049;
+    }
+
+
+</style>
 <?php
 session_start();
 include "../model/pdo.php";
@@ -24,12 +65,15 @@ foreach ($dsbl as $bl) {
 ?>
 
 <h1>BÌNH LUẬN</h1>
+<div class="ah">
 <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
 <input type="hidden" name="idpro" value="idpro">
-<textarea name="noidung" id="" cols="100%" rows="10"></textarea> <br>
+<input type="text" name="noidung" value=""> <br>
 <button type="submit" name="guibinhluan">Gửi</button>
 
 </form>
+</div>
+
 <?php
 
 if (isset($_GET['$idpro'])) {
