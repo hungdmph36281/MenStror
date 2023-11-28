@@ -4,6 +4,7 @@ include "header.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
+include "../model/binhluan.php";
 //controller
 
 if (isset($_GET['act'])) {
@@ -128,6 +129,7 @@ if (isset($_GET['act'])) {
             $listtaikhoan = loadall_taikhoan();
             include "taikhoan/list.php";
             break;
+            
         case 'xoakh':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 delete_taikhoan($_GET['id']);
@@ -135,6 +137,17 @@ if (isset($_GET['act'])) {
             $listtaikhoan = loadall_taikhoan();
             include "taikhoan/list.php";
             break;
+            case 'dsbl':
+                $listbinhluan=loadall_binhluan($idpro);
+                include "binhluan/list.php";
+                break;
+                case 'xoabl':
+                    if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                        delete_binhluan($_GET['id']);
+                    }
+                    $listbinhluan = loadall_binhluan($idpro);
+                    include "binhluan/list.php";
+                    break;
         default:
             include "home.php";
             break;

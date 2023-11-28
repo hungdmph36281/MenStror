@@ -167,12 +167,15 @@
 			<div class="col">
 				<div class="tabs_container">
 					<ul class="tabs d-flex flex-sm-row flex-column align-items-left align-items-md-center justify-content-center">
-						<li class="tab active" data-active-tab="tab_1"><span>Sản phẩm cùng loại</span></li>
+						<!-- <li class="tab active" data-active-tab="tab_1"><span>Sản phẩm cùng loại</span></li> -->
 
-						<li class="tab" data-active-tab="tab_3"><span>Bình luận</span></li>
+						<!-- <li class="tab" data-active-tab="tab_3"><span>BÌNH LUẬN</span></li> -->
 					</ul>
 				</div>
 			</div>
+		</div>
+		<div>
+			<iframe src="views/binhluan.php?act=idpro=<?=$id?>" width="100%" height="200px" frameborder="0"></iframe>
 		</div>
 		<div class="row">
 			<div class="col">
