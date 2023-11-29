@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="./views/styles/main_styles.css">
     <link rel="stylesheet" type="text/css" href="./views/styles/responsive.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
     <!-- <style>
         h6 {
             color: whitesmoke;
@@ -61,7 +62,7 @@
                                     ?>
                                         <li class="account">
                                             <a href="#">
-                                                Xin chào
+                                                Xin chào!!
                                                 <?= $user['user'] ?>
                                             </a>
                                             <ul class="account_selection">
@@ -129,7 +130,7 @@
 
                                     <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                                     <li class="checkout">
-                                        <a href="#">
+                                        <a href="index.php?act=addtocart">
                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                         </a>
                                     </li>
