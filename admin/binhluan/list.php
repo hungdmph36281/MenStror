@@ -42,7 +42,7 @@
                     <?php
                         foreach ($listbinhluan as $binhluan){
                             extract($binhluan);
-                            $sua_bl = "index.php?act=suabl&id=".$id;
+                           
                             $xoa_bl = "index.php?act=xoabl&id=".$id;
                         echo '
                             <tr>
@@ -53,7 +53,7 @@
                             <td>'.$idpro.'</td>
                             <td>'.$ngaybinhluan.'</td>
                             
-                            <td><a href="'.$sua_bl.'"><input type="button" value="Sửa"></a> <a href="'.$xoa_bl.'"><input type="button" value="Xóa"></a></td>
+                            <td></a> <a href="'.$xoa_bl.'"><input type="button" value="Xóa"></a></td>
                             </tr>
                         ';
                         }
