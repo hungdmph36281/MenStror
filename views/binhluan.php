@@ -1,12 +1,11 @@
 
-    <style>
+<style>
     .ah {
         max-width: 500px;
         margin: 20px auto;
         padding: 15px;
-        border: 1px solid #ddd;
         border-radius: 5px;
-        background-color: #f9f9f9;
+      
     }
 
     .ah form {
@@ -16,12 +15,13 @@
     }
 
     .ah input[type="text"] {
-        width: 100%;
+        width: calc(100% - 22px); /* Adjust the width to leave space for the button */
         padding: 10px;
         margin-bottom: 10px;
         border: 1px solid #ddd;
         border-radius: 4px;
         box-sizing: border-box;
+        display: inline-block; /* Make sure the input is inline with the button */
     }
 
     .ah button {
@@ -31,14 +31,14 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        display: inline-block; /* Make sure the button is inline with the input */
     }
 
     .ah button:hover {
         background-color: #45a049;
     }
-
-
 </style>
+
 <?php
 session_start();
 include "../model/pdo.php";
@@ -68,7 +68,7 @@ foreach ($dsbl as $bl) {
 <div class="ah">
 <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
 <input type="hidden" name="idpro" value="idpro">
-<input type="text" name="noidung" value=""> <br>
+<input type="text" name="noidung" value=""> 
 <button type="submit" name="guibinhluan">Gửi</button>
 
 </form>
