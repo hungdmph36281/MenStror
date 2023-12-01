@@ -3,6 +3,7 @@ include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
+include "../model/thongke.php";
 include "../model/cart.php";
 include "header.php";
 //controller
@@ -124,6 +125,14 @@ if (isset($_GET['act'])) {
             $listdanhmuc = loadall_danhmuc();
             $listsanpham = loadall_sanpham();
             include "sanpham/list.php";
+            break;
+        case 'listtk':
+            $listthongke = loadall_thongke();
+            include "thongke/listthongke.php";
+            break;
+        case 'bieudo':
+            $listthongke = loadall_thongke();
+            include "thongke/bieudo.php";
             break;
         case 'dskh':
             $listtaikhoan = loadall_taikhoan();

@@ -112,7 +112,6 @@
                                         <th>Sản phẩm</th>
                                         <th>Đơn giá</th>
                                         <th>Số lượng</th>
-                                        <th>Size</th>
                                         <th>Thành tiền</th>
 
                                     </tr>
@@ -134,13 +133,10 @@
                                                 <h5><?= $cart[1] ?></h5>
                                             </td>
                                             <td class="price">
-                                                <span><?= number_format($cart[3]) ?> đ</span>
+                                                <span><?= number_format($cart[3]) ?> $</span>
                                             </td>
                                             <td class="price">
                                                 <span><?= $cart[4] ?></span>
-                                            </td>
-                                            <td>
-                                                <?= $cart[6] ?>
                                             </td>
                                             <td class="price">
                                                 <span><?= number_format($ttien) ?> $</span>
