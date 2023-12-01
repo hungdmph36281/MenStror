@@ -17,7 +17,6 @@
         <link href=".\assets\css\bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href=".\assets\css\icons.min.css" rel="stylesheet" type="text/css">
         <link href=".\assets\css\app.min.css" rel="stylesheet" type="text/css">
-
     </head>
 
     <body>
@@ -162,14 +161,14 @@
                             <li>
                                 <a href="javascript: void(0);">
                                     <i class="la la-dashboard"></i>
-                                    <span class="badge badge-info badge-pill float-right">2</span>
+                                    <span class="badge badge-info badge-pill float-right"></span>
                                     <span> Trang tổng quan </span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="javascript: void(0);">
-                                    <i class="la la-cube"></i>
+                                <i class="fas fa-bars"></i>
                                     <span> Quản lý danh mục </span>
                                     <span class="menu-arrow"></span>
                                 </a>
@@ -184,7 +183,7 @@
                             </li>
                             <li>
                                 <a href="javascript: void(0);">
-                                    <i class="la la-cube"></i>
+                                <i class="fas fa-box"></i>
                                     <span> Quản lý sản phẩm </span>
                                     <span class="menu-arrow"></span>
                                 </a>
@@ -199,8 +198,20 @@
                             </li>
                             <li>
                                 <a href="javascript: void(0);">
-                                    <i class="la la-cube"></i>
-                                    <span> Quản lý tài khoản </span>
+                                <i class="fas fa-comments"></i>
+                                    <span> Quản lý đơn hàng </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="index.php?act=listdh">Danh sách đơn hàng</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);">
+                                <i class="fas fa-users"></i>
+                                    <span> Quản lý khách hàng </span>
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
@@ -208,23 +219,8 @@
                                         <a href="index.php?act=dskh">Danh sách tài khoản</a>
                                     </li>
                                 </ul>
-                                
-                                
                             </li>
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="la la-cube"></i>
-                                    <span> Quản lý bình luận </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li>
-                                        <a href="index.php?act=dsbl">Danh sách bình luận</a>
-                                    </li>
-                                </ul>
-                                
-                                
-                            </li>
+
                             <li>                      <li>
                                 <a href="javascript: void(0);">
                                     <i class="la la-bar-chart"></i>
