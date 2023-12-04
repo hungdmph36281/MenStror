@@ -174,9 +174,25 @@
 				</div>
 			</div>
 		</div>
-		<div>
+		<!-- <div>
 			<iframe src="views/binhluan.php?act=idpro=<?=$id?>" width="100%" height="200px" frameborder="0"></iframe>
-		</div>
+		</div> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+						<script>
+						$(document).ready(function() {
+
+							$("#bl").load("views/binhluan.php", {
+								idpro: <?=$id?>
+							});
+
+
+						});
+						</script>
+						<div class="mb" id="bl">
+
+
+						</div>
 		<div class="row">
 			<div class="col">
 
