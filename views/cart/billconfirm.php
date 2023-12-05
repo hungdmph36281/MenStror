@@ -69,8 +69,6 @@ if (isset($taikhoan) && $taikhoan != 0) {
                             <p>email : <?= $taikhoan['email'] ?></p>
                             <p>Phương thức thanh toán : <?= $pttt ?></p>
                             <p>Ngày lập hóa đơn : <?= $bill['ngaydathang'] ?></p>
-                            <p>Tổng thanh toán : <?= number_format($bill['total']) ?> $</p>
-
                         </div>
 
 
@@ -84,7 +82,6 @@ if (isset($taikhoan) && $taikhoan != 0) {
                                     <th>Sản phẩm</th>
                                     <th>Đơn giá</th>
                                     <th>Số lượng</th>
-                                    <th>Thành tiền</th>
 
                                 </tr>
                             </thead>
@@ -107,14 +104,8 @@ if (isset($taikhoan) && $taikhoan != 0) {
                                         <td class="price">
                                             <span><?= number_format($cart['price']) ?> $</span>
                                         </td>
-                                        <td>
-                                            <?= $cart[6] ?>
-                                        </td>
                                         <td class="price">
                                             <span><?= $cart["soluong"] ?></span>
-                                        </td>
-                                        <td class="price">
-                                            <span><?= number_format($cart['thanhtien']) ?> $</span>
                                         </td>
 
                                     </tr>
@@ -125,6 +116,9 @@ if (isset($taikhoan) && $taikhoan != 0) {
 
                             </tbody>
                         </table>
+                        <p class="tien" style="color: red;
+    font-size: 16px;">Tổng thanh toán : <?= number_format($bill['total']) ?> $</p>
+                                    </div>
                     </div>
 
                     <!-- <div class="col-12 col-lg-10">

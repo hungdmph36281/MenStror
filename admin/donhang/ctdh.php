@@ -1,3 +1,4 @@
+
 <div class="content-page">
     <div class="content">
 
@@ -35,7 +36,6 @@
                                             <p>Phương thức thanh toán : <?= $pttt ?></p>
                                             <p>Tình trạng đơn hàng : <?= $ttdh ?></p>
                                             <p>Ngày lập hóa đơn : <?= $bill['ngaydathang'] ?></p>
-                                            <p>Tổng thanh toán : <?= number_format($bill['total']) ?> $</p>
                                             <p>Tình trạng thanh toán : <?= $tttt ?></p>
 
                                         </div>
@@ -46,7 +46,6 @@
                                                     <th>Sản phẩm</th>
                                                     <th>Đơn giá</th>
                                                     <th>Số lượng</th>
-                                                    <th>Thành tiền</th>
 
                                                 </tr>
                                             </thead>
@@ -72,18 +71,15 @@
                                                         <td class="price">
                                                             <span><?= $cart["soluong"] ?></span>
                                                         </td>
-                                                        <td class="price">
-                                                            <span><?= number_format($cart['thanhtien']) ?> $</span>
-                                                        </td>
 
                                                     </tr>
 
 
                                                 <?php endforeach; ?>
-
-
                                             </tbody>
                                         </table>
+                                        <p class="tien" style="color: red;
+    font-size: 16px;">Tổng thanh toán : <?= number_format($bill['total']) ?> $</p>
                                     </div>
 
                                     <!-- <div class="col-12 col-lg-10">

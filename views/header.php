@@ -15,18 +15,24 @@
     <link rel="stylesheet" type="text/css" href="./views/styles/main_styles.css">
     <link rel="stylesheet" type="text/css" href="./views/styles/responsive.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    
+
     <!-- <style>
         h6 {
             color: whitesmoke;
             font-size: 20;
             font-family: bold;
+            
         }
 
         h1 {
             font-family: bold;
             color: whitesmoke;
+            background-color: red;
+            border: black;
+            color: white;
+            
         }
+
         
     </style> -->
 </head>
@@ -121,9 +127,9 @@
                                 </ul>
                                 <ul class="navbar_user">
                                     <li>
-                                        <form action="index.php?act=categories.php" method="post">
-                                            <input type="text" name="kyw">
-                                            <input style="padding:1px 10px" class="btn-primary" type="submit" name="timkiem" value="Tìm kiếm">
+                                        <form action="index.php?act=categories" method="post">
+                                            <input type="text" name="kyw" style="width: 200px;">
+                                            <input type="submit" name="timkiem" value="Tìm kiếm" style="margin: 5px; background-color: red;  color: white;">
                                         </form>
                                     </li>
                                     </li>

@@ -37,9 +37,10 @@
         }
     }
 
-    function loadone_sanpham($id){
-        $sql="select * from sanpham where id=".$id;
-        $sp=pdo_query_one($sql);
+    function loadone_sanpham($id)
+    {
+        $sql = "SELECT * from sanpham where id=" . $id;
+        $sp = pdo_query_one($sql);
         return $sp;
     }
     function load_sanphamcungloai($id,$iddm){
@@ -47,11 +48,13 @@
         $listsanpham=pdo_query($sql);
         return $listsanpham;
     }
-    function update_sanpham($id,$iddm,$tensp,$giasp,$mota,$hinh){
-        if($hinh!="")
-            $sql="update sanpham set iddm='".$iddm."', name='".$tensp."',price='".$giasp."',  mota='".$mota."',  img='".$hinh."'where id=".$id;
-        else
-        $sql="update sanpham set iddm='".$iddm."', name='".$tensp."',price='".$giasp."',mota='".$mota."'  where id=".$id;
+    function update_sanpham($id, $iddm, $tensp, $giasp, $mota, $hinh)
+    {
+        if ($hinh != "") {
+            $sql = "UPDATE sanpham set iddm='" . $iddm . "', name='" . $tensp . "', price='" . $giasp . "' , mota='" . $mota . "', img='" . $hinh . "' where id=" . $id;
+        } else {
+            $sql = "UPDATE sanpham set iddm='" . $iddm . "', name='" . $tensp . "', price='" . $giasp . "' , mota='" . $mota . "' where id=" . $id;
+        }
         pdo_execute($sql);
     }
 ?>
