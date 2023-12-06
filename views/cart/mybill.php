@@ -16,6 +16,7 @@
                                         <th>Tổng tiền</th>
                                         <th>Tình trạng đơn hàng</th>
                                         <th>Tình trạng thanh toán</th>
+                                        <th>Thao tác</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -25,7 +26,9 @@
                                                 $ttdh=get_ttdh($bill['bill_satus']);
                                                 $countsp=load_cart_count($bill['id']);
                                                 $tttt = get_tttt($bill['bill_thanhtoan']);
+                                                // $ctdh="index.php?act=ctdh&id=".$id .$iduser;
                                             ?>
+                                            
                                             <tr>
                                             <td><?=$bill['id'] ?></td>
                                             <td><?=$bill['ngaydathang'] ?></td>
@@ -33,6 +36,7 @@
                                             <td><?=number_format($bill['total']) ?>$</td>
                                             <td><?= $ttdh?></td>
                                             <td><?= $tttt?></td>
+                                            <td><a href= "index.php?act=ctdh&id=<?=$bill['id']?>&&act=ctdh&iduser=<?=$bill['iduser']?>"><input  class="btn-info" type="button" value="Chi tiết hóa đơn "></a> </td>
                                             </tr>
                                         <?php endforeach; }?>
                               

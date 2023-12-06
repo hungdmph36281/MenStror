@@ -188,17 +188,17 @@ if (isset($_GET['act'])) {
                 </script>";
             // include "donhang/list.php";
             break;
-        case 'listbl':
-            $listbinhluan = loadall_binhluan(0);
-            include "binhluan/listbinhluan.php";
-            break;
-        case 'xoabl':
-            if (isset($_GET['id'])) {
-                delete_binhluan($_GET['id']);
-            }
-            $listbinhluan = loadall_binhluan(0);
-            include "binhluan/listbinhluan.php";
-            break;
+        // case 'listbl':
+        //     $listbinhluan = loadall_binhluan(0);
+        //     include "binhluan/listbinhluan.php";
+        //     break;
+        // case 'xoabl':
+        //     if (isset($_GET['id'])) {
+        //         delete_binhluan($_GET['id']);
+        //     }
+        //     $listbinhluan = loadall_binhluan(0);
+        //     include "binhluan/listbinhluan.php";
+        //     break;
         default:
             include "home.php";
             break;
