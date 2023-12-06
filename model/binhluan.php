@@ -20,4 +20,5 @@
         $sql="delete from binhluan where id=".$id;
         pdo_execute($sql);
     }
+    
 ?>

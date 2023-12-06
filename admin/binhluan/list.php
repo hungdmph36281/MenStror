@@ -35,6 +35,8 @@
                         <th>IDPRO</th>
                         <th>NGÀY BÌNH LUẬN</th>
                         <th></th>
+
+                        
                     </tr>
                 </thead>
                 <tbody>

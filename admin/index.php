@@ -1,10 +1,10 @@
 <?php
 include "../model/pdo.php";
-include "header.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
-include "../model/binhluan.php";
+include "../model/cart.php";
+include "header.php";
 //controller
 
 if (isset($_GET['act'])) {
@@ -129,7 +129,6 @@ if (isset($_GET['act'])) {
             $listtaikhoan = loadall_taikhoan();
             include "taikhoan/list.php";
             break;
-            
         case 'xoakh':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 delete_taikhoan($_GET['id']);
@@ -137,17 +136,58 @@ if (isset($_GET['act'])) {
             $listtaikhoan = loadall_taikhoan();
             include "taikhoan/list.php";
             break;
-            case 'dsbl':
-                $listbinhluan=loadall_binhluan($idpro);
-                include "binhluan/list.php";
-                break;
-                case 'xoabl':
-                    if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                        delete_binhluan($_GET['id']);
-                    }
-                    $listbinhluan = loadall_binhluan($idpro);
-                    include "binhluan/list.php";
-                    break;
+        case 'listdh':
+            if (isset($_POST['kyw'])) {
+                $kyw = $_POST['kyw'];
+            } else {
+                $kyw = "";
+            }
+            $listbill = loadall_bill_admin($kyw, 0);
+            include "donhang/list.php";
+            break;
+        case 'xoadh':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_donhang($_GET['id']);
+            }
+            $listbill = loadall_bill($kyw, 0);
+            include "donhang/list.php";
+            break;
+        case 'ctdh':
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+                $iduser = $_GET['iduser'];
+            }
+            $taikhoan =  loadone_taikhoan($iduser);
+            $cart = loadcart_cthoadon($id);
+            $bill = loadone_bill($id);
+            include "donhang/ctdh.php";
+            break;
+        case 'suadh':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                // $sql = "SELECT * FROM danhmuc where id =".$_GET['id'];
+                // $dm = pdo_query_one($sql);
+                $bill = loadone_bill($_GET['id']);
+            }
+            include "donhang/update.php";
+            break;
+
+        case 'updatedh':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $bill_satus = $_POST['bill_satus'];
+                $bill_thanhtoan = 0;
+                $id = $_POST['id'];
+                update_bill($id, $bill_satus);
+                if ($bill_satus == 3) {
+                    update_bill_thanhtoan($bill_thanhtoan, $bill_satus);
+                } else {
+                    update_bill_chuathanhtoan($bill_thanhtoan, $bill_satus);
+                }
+            }
+            echo "<script>
+                    window.location.href='index.php?act=listdh';
+                </script>";
+            // include "donhang/list.php";
+            break;
         default:
             include "home.php";
             break;

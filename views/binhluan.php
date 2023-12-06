@@ -89,6 +89,7 @@ session_start();
 
     .box_content2 {
         margin-bottom: 20px;
+        
     }
 
     table {

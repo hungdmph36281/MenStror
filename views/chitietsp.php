@@ -128,6 +128,11 @@
 					<form action="index.php?act=addtocart" method="post">
 						<!-- ... (previous input fields remain unchanged) ... -->
 						<div class="quantity d-flex flex-column flex-sm-row align-items-sm-center">
+						<input type="hidden" name="id" value="<?=$onesp['id']?>">
+	                        <input type="hidden" name="name" value="<?=$onesp['name']?>">
+	                        <input type="hidden" name="img" value="<?=$onesp['img']?>">
+	                        <input type="hidden" name="price" value="<?=$onesp['price']?>">
+	                        <div class="quantity d-flex flex-column flex-sm-row align-items-sm-center">
 							<span>Số lượng:</span>
 							<div class="quantity_selector">
 								<span class="minus">
@@ -141,10 +146,11 @@
 							<!-- Size selection -->
 							<div class="size_selector">
 								<label for="size">Chọn size:</label>
-								<select id="size" name="size">
-									<option value="small">S</option>
-									<option value="medium">M</option>
-									<option value="large">L</option>
+								<select id="size" name="size" >
+									<option value="S">S</option>
+									<option value="M">M</option>
+									<option value="L">L</option>
+									<option value="XL">XL</option>
 									<!-- Add more size options as needed -->
 								</select>
 							</div>
@@ -167,13 +173,14 @@
 			<div class="col">
 				<div class="tabs_container">
 					<ul class="tabs d-flex flex-sm-row flex-column align-items-left align-items-md-center justify-content-center">
-						<!-- <li class="tab active" data-active-tab="tab_1"><span>Sản phẩm cùng loại</span></li>  -->
+						<li class="tab active" data-active-tab="tab_1"><span>Sản phẩm cùng loại</span></li>
 
-						<!-- <li class="tab" data-active-tab="tab_3"><span><a href="">Bình luận</a></span></li> -->
+						<li class="tab" data-active-tab="tab_3"><span>Bình luận</span></li>
 					</ul>
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<!-- <div>
 			<iframe src="views/binhluan.php?act=idpro=<?=$id?>" width="100%" height="200px" frameborder="0"></iframe>
 		</div> -->
@@ -193,11 +200,12 @@
 
 
 						</div>
+=======
+>>>>>>> 1dfc7c84d1827435ac8c9f990283f311af7346cd
 		<div class="row">
 			<div class="col">
 
 				<!-- Tab Description -->
-				
 
 				<div id="tab_1" class="tab_container active">
 					<div class="row">
@@ -216,7 +224,7 @@
 									<div class="product_info">
 										<h6 class="product_name"><a href="index.php?act=ctsp&idsp=<?= $sp['id'] ?>"><?= $sp['name'] ?></a></h6>
 										<div class="product_price"><?= number_format($sp['price']) ?>
-											đ<span><?= number_format($sp['price'] * 110 / 100) ?> đ</span></div>
+											$<span><?= number_format($sp['price'] * 110 / 100) ?> $</span></div>
 									</div>
 								</div>
 								<div class="red_button add_to_cart_button"><a href="index.php?act=ctsp&idsp=<?= $sp['id'] ?>">Chi tiết sản phẩm</a></div>
@@ -224,117 +232,17 @@
 						<?php endforeach; ?>
 					</div>
 				</div>
-
-				<!-- Tab Additional Info -->
-				<!-- 
-					<div id="tab_2" class="tab_container">
-						<div class="row">
-							<div class="col additional_info_col">
-								<div class="tab_title additional_info_title">
-									<h4>Additional Information</h4>
-								</div>
-								<p>COLOR:<span>Gold, Red</span></p>
-								<p>SIZE:<span>L,M,XL</span></p>
-							</div>
-						</div>
-					</div> -->
-
-				<!-- Tab Reviews -->
-
-				<!-- <div id="tab_3" class="tab_container">
+				
+				<div id="tab_3" class="tab_container">
 	                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	                    <script>
 	                    $(document).ready(function() {
 	                        $("#binhluan").load("views/binhluan/binhluanform.php", {
-	                            $idpro: <?= $id ?>
+	                            $idpro: <?=$id?>
 	                        });
 	                    });
 	                    </script>
-	                    <div class="row" id="binhluan"> -->
-
-
-				<!-- User Reviews
-
-							<div class="col-lg-6 reviews_col">
-								<div class="tab_title reviews_title">
-									<h4>Reviews (2)</h4>
-								</div>
-
-								 User Review -->
-				<!-- 
-								<div class="user_review_container d-flex flex-column flex-sm-row">
-									<div class="user">
-										<div class="user_pic"></div>
-										<div class="user_rating">
-											<ul class="star_rating">
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-											</ul>
-										</div>
-									</div>
-									<div class="review">
-										<div class="review_date">27 Aug 2016</div>
-										<div class="user_name">Brandon William</div>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</div>
-								</div> -->
-
-				<!-- User Review -->
-
-				<!-- <div class="user_review_container d-flex flex-column flex-sm-row">
-									<div class="user">
-										<div class="user_pic"></div>
-										<div class="user_rating">
-											<ul class="star_rating">
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-											</ul>
-										</div>
-									</div>
-									<div class="review">
-										<div class="review_date">27 Aug 2016</div>
-										<div class="user_name">Brandon William</div>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									</div>
-								</div>
-							</div> -->
-
-				<!-- Add Review -->
-
-				<!-- <div class="col-lg-6 add_review_col">
-
-								<div class="add_review">
-									<form id="review_form" action="post">
-										<div>
-											<h1>Add Review</h1>
-											<input id="review_name" class="form_input input_name" type="text" name="name" placeholder="Name*" required="required" data-error="Name is required.">
-											<input id="review_email" class="form_input input_email" type="email" name="email" placeholder="Email*" required="required" data-error="Valid email is required.">
-										</div>
-										<div>
-											<h1>Your Rating:</h1>
-											<ul class="user_star_rating">
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star" aria-hidden="true"></i></li>
-												<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-											</ul>
-											<textarea id="review_message" class="input_review" name="message"  placeholder="Your Review" rows="4" required data-error="Please, leave us a review."></textarea>
-										</div>
-										<div class="text-left text-sm-right">
-											<button id="review_submit" type="submit" class="red_button review_submit_btn trans_300" value="Submit">submit</button>
-										</div>
-									</form>
-								</div>
-
-							</div> --> 
-
+	                </div>
 			</div>
 		</div>
 
@@ -371,8 +279,8 @@
 				<div class="benefit_item d-flex flex-row align-items-center">
 					<div class="benefit_icon"><i class="fa fa-undo" aria-hidden="true"></i></div>
 					<div class="benefit_content">
-						<h6>45 NGÀY TRẢ LẠI</h6>
-						<p>Làm cho nó trông giống như có thể đọc được</p>
+						<h6>7 NGÀY TRẢ LẠI</h6>
+						<p>Sản phâm còn nguyên vẹn khi trả hàng và còn mác sản phẩm</p>
 					</div>
 				</div>
 			</div>
