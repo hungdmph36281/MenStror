@@ -78,9 +78,6 @@
                     
                         <div class="row frmcontent">
                             <form action="index.php?act=adddm" method="post">
-                                <div class="row mb10">Mã loại: <br>
-                                    <input type="text" name="maloai" disabled>
-                                </div>
                                 <div class="row mb10">Tên loại: <br>
                                     <input type="text" name="tenloai">
                                 </div>
