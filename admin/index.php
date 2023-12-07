@@ -4,11 +4,7 @@ include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
 include "../model/cart.php";
-<<<<<<< HEAD
-include "../model/binhluan.php";
-=======
 include "../model/thongke.php";
->>>>>>> d92c480a8a7e6bed565a3730afb09c41a530a3a8
 include "header.php";
 
 //controller
