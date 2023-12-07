@@ -57,23 +57,30 @@
                 include "./views/taikhoan/dangky.php";
                 break;
                 case 'dangnhap':
-                    
-                    if(isset($_POST['dangnhap'])&& ($_POST['dangnhap'])){
-                        $user= $_POST['user'];
-                        $pass= $_POST['pass'];
+                    if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
+                        $user = $_POST['user'];
+                        $pass = $_POST['pass'];
                         $checkuser = checkuser($user, $pass);
-                        if(is_array($checkuser)){
-                            $_SESSION['user']=$checkuser;
-                            echo "<script>
-                            window.location.href='index.php';
-                            </script>";
-                        }else{
-                            $thongbao="Tài khoản khồng tồn tại";
-                        }
+                        if (is_array($checkuser)) {
+                            $_SESSION['user'] = $checkuser;
 
+                            // Kiểm tra vai trò
+                            if ($checkuser['role'] == 1) {
+                                // Nếu vai trò là 1 (admin), chuyển hướng đến trang quản trị admin
+                                echo "<script>
+                                    window.location.href='admin/index.php';
+                                </script>";
+                            } else {
+                                // Nếu vai trò là người dùng thông thường, chuyển hướng đến trang chính
+                                echo "<script>
+                                    window.location.href='index.php';
+                                </script>";
+                            }
+                        } else {
+                            $thongbao = "Tài khoản không tồn tại";
+                        }
                     }
                     include "views/taikhoan/dangnhap.php";
-
                     break;
                 case 'edit_taikhoan':
                     if(isset($_POST['capnhat'])){

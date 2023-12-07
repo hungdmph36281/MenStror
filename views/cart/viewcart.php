@@ -75,7 +75,7 @@
                         <?php  endforeach; ?>
 
                         <td colspan="4"><b>Tổng thanh toán :</b></td>
-                        <td><b><?=number_format($tong) ?></b></td>
+                        <td><b><?=number_format($tong) ?></b>$</td>
 
                     </tbody>
                 </table>
