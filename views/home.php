@@ -24,7 +24,7 @@
                 <?php foreach ($dmsp as $dm) : ?>
 
                 <div class="col-md-4">
-					<div class="banner_item align-items-center" style="background-image:url(./views/images/banner_4.jpg)">
+					<div class="banner_item align-items-center" style="background-image:url(./views/images/banner_7.jpg)">
 						<div class="banner_category">
                             <a href="index.php?act=categories&iddm=<?= $dm['id']?>"><?= $dm['name']?></a>
                         </div>

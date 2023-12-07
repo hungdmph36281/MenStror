@@ -214,6 +214,16 @@
                 $listbill=loadall_bill($_SESSION['user']['id']);
                 include "./views/cart/mybill.php";
                 break;
+                case 'ctdh':
+                    if (isset($_GET['id'])) {
+                        $id = $_GET['id'];
+                        $iduser = $_GET['iduser'];
+                    }
+                    $taikhoan =  loadone_taikhoan($iduser);
+                    $cart = loadcart_cthoadon($id);
+                    $bill = loadone_bill($id);
+                    include "./views/cart/chitietdonhang.php";
+                    break;
             default:
             include "./views/home.php";
                 break;

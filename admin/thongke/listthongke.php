@@ -1,3 +1,8 @@
+<style>
+    /* .input_button{
+        
+    } */
+</style>
 <div class="content-page">
     <div class="content">
 
@@ -11,7 +16,7 @@
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="index.php">Trang chủ admin</a></li>
-                                <li class="breadcrumb-item active">Danh sách sản phẩm</li>
+                                <li class="breadcrumb-item active">Danh sách thống kê</li>
                             </ol>
                         </div>
                         <h3 class="page-title">THỐNG KÊ</h3>
@@ -54,13 +59,11 @@
                 </tbody>
             </table>
             <div class="input_button">
-                <a href="index.php?act=bieudo"><input type="button" value="Xem biểu đồ"></a>
+                <a href="index.php?act=bieudo" ><input type="button"  value="Xem biểu đồ" style="background-color: blue;"></a>
             </div>
         </div>
     </div>
 </div>
-
-
                     </div>
                 
                     

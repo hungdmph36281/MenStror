@@ -4,7 +4,11 @@ include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
 include "../model/cart.php";
+<<<<<<< HEAD
 include "../model/binhluan.php";
+=======
+include "../model/thongke.php";
+>>>>>>> d92c480a8a7e6bed565a3730afb09c41a530a3a8
 include "header.php";
 
 //controller
@@ -127,6 +131,14 @@ if (isset($_GET['act'])) {
             $listsanpham = loadall_sanpham();
             include "sanpham/list.php";
             break;
+            case 'listtk':
+                $listthongke =loadall_thongke();
+                include "thongke/listthongke.php";
+                break;  
+            case 'bieudo':
+                $listthongke =loadall_thongke();
+                include "thongke/bieudo.php";
+                break; 
         case 'dskh':
             $listtaikhoan = loadall_taikhoan();
             include "taikhoan/list.php";

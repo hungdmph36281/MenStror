@@ -242,10 +242,10 @@
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="charts-apex.html">Apex Charts</a>
+                                        <a href="index.php?act=listtk">Danh sách thống kê</a>
                                     </li>
                                     <li>
-                                        <a href="charts-flot.html">Flot Charts</a>
+                                        <a href="index.php?act=bieudo">Biểu đồ</a>
                                     </li>
                                 </ul>
                             </li></li>
