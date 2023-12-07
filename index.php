@@ -15,23 +15,19 @@
         $act = $_GET['act'];
         switch($act){
             case 'categories':
-                if((isset($_POST['kyw'])) && ($_POST['kyw']!="")) {
+                if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
                     $kyw = $_POST['kyw'];
-                }else{
+                } else {
                     $kyw = "";
                 }
-                if((isset($_GET['iddm'])) && ($_GET['iddm']>0)){
+    
+                if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
                     $iddm = $_GET['iddm'];
-
-                }else if((isset($_GET['iddm'])) && ($_GET['iddm']==0)){
-                    $iddm = $_GET['iddm'];
-                    $dssp = loadall_sanpham($kyw= "",$iddm=0);
-                    include "./views/categories.php";
-                }else{
+                } else {
                     $iddm = 0;
                 }
+                $dssp = loadall_sanpham($kyw, $iddm);
                 $tendm = load_ten_dm($iddm);
-                $dssp = loadall_sanpham($kyw,$iddm);
                 include "./views/categories.php";
                 break;
             case 'post':

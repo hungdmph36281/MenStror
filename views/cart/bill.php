@@ -134,7 +134,7 @@
                                                 <h5><?= $cart[1] ?></h5>
                                             </td>
                                             <td class="price">
-                                                <span><?= number_format($cart[3]) ?> đ</span>
+                                                <span><?= number_format($cart[3]) ?> $</span>
                                             </td>
                                             <td class="price">
                                                 <span><?= $cart[4] ?></span>

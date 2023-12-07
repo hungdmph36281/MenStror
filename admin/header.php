@@ -221,6 +221,19 @@
                                 </ul>
                             </li>
 
+                            <li>
+                                <a href="javascript: void(0);">
+                                <i class="fas fa-users"></i>
+                                    <span> Quản lý bình luận </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="index.php?act=listbl">Danh sách bình luận</a>
+                                    </li>
+                                </ul>   
+                            </li>
+
                             <li>                      <li>
                                 <a href="javascript: void(0);">
                                     <i class="la la-bar-chart"></i>

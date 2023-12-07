@@ -4,7 +4,9 @@ include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
 include "../model/cart.php";
+include "../model/binhluan.php";
 include "header.php";
+
 //controller
 
 if (isset($_GET['act'])) {
