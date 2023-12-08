@@ -134,7 +134,7 @@
                                                 <h5><?= $cart[1] ?></h5>
                                             </td>
                                             <td class="price">
-                                                <span><?= number_format($cart[3]) ?> $</span>
+                                                <span><?= number_format($cart[3]) ?> đ</span>
                                             </td>
                                             <td class="price">
                                                 <span><?= $cart[4] ?></span>
@@ -143,7 +143,7 @@
                                                 <?= $cart[6] ?>
                                             </td>
                                             <td class="price">
-                                                <span><?= number_format($ttien) ?> $</span>
+                                                <span><?= number_format($ttien) ?> đ</span>
                                             </td>
 
                                         </tr>
@@ -158,7 +158,7 @@
 
                         <div class="col-12 col-lg-10">
                             <div class="cart-summary">
-                                <h5>Tổng Thanh Toán : <?= number_format($tong) ?> $</h5>
+                                <h5>Tổng Thanh Toán : <?= number_format($tong) ?> đ</h5>
                                 <h5>Miễn phí vận chuyển</h5>
                                 <div class="cart-btn mt-100">
                                     <input style="margin: 10px 10px; font-size: 18px; padding:4px;background-color: red;" type="submit" class="btn-primary" name="dongydathang" value="Đồng ý đặt hàng">

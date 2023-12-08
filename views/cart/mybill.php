@@ -33,7 +33,7 @@
                                             <td><?=$bill['id'] ?></td>
                                             <td><?=$bill['ngaydathang'] ?></td>
                                             <td><?=$countsp ?></td>
-                                            <td><?=number_format($bill['total']) ?>$</td>
+                                            <td><?=number_format($bill['total']) ?>đ</td>
                                             <td><?= $ttdh?></td>
                                             <td><?= $tttt?></td>
                                             <td><a href= "index.php?act=ctdh&id=<?=$bill['id']?>&&act=ctdh&iduser=<?=$bill['iduser']?>"><input  class="btn-info" type="button" value="Chi tiết hóa đơn "></a> </td>

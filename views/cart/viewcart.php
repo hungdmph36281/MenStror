@@ -43,7 +43,7 @@
                                 <h5 ><?=$cart[1] ?></h5>
                             </td>
                             <td class="price" >
-                                <span><?=number_format($cart[3]) ?> $</span>
+                                <span><?=number_format($cart[3]) ?> đ</span>
                             </td>
                             <td class="price">
                             <form action="index.php?act=updatecart&id=<?=$cart[0] ?>" method="post">
@@ -60,7 +60,7 @@
 
                             </td>
                             <td class="price">
-                                <span><?=number_format($cart[3]*$cart[4]) ?> $</span>
+                                <span><?=number_format($cart[3]*$cart[4]) ?> đ</span>
                             </td>
                             <td>
                                 <?= $cart[6]?>
@@ -75,7 +75,7 @@
                         <?php  endforeach; ?>
 
                         <td colspan="4"><b>Tổng thanh toán :</b></td>
-                        <td><b><?=number_format($tong) ?></b>$</td>
+                        <td><b><?=number_format($tong) ?></b>đ</td>
 
                     </tbody>
                 </table>

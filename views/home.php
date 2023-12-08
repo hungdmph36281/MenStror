@@ -59,7 +59,7 @@
 								<div class="favorite favorite_left"></div>
 								<div class="product_info">
 									<h6 class="product_name"><a href="index.php?act=ctsp&idsp=<?= $sp['id'] ?>"><?= $sp['name'] ?></a></h6>
-									<div class="product_price"><?= number_format($sp['price']) ?> $<span><?= number_format($sp['price']*110/100) ?> $</span></div>
+									<div class="product_price"><?= number_format($sp['price']) ?> đ<span><?= number_format($sp['price']*110/100) ?> đ</span></div>
 								</div>
 							</div>
 							<div class="red_button add_to_cart_button"><a href="index.php?act=ctsp&idsp=<?= $sp['id'] ?>">Chi tiết sản phẩm</a></div>

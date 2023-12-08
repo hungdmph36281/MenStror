@@ -102,7 +102,7 @@ if (isset($taikhoan) && $taikhoan != 0) {
                                             <h5><?= $cart['name'] ?></h5>
                                         </td>
                                         <td class="price">
-                                            <span><?= number_format($cart['price']) ?> $</span>
+                                            <span><?= number_format($cart['price']) ?> đ</span>
                                         </td>
                                         <td class="price">
                                             <span><?= $cart["soluong"] ?></span>
@@ -117,7 +117,7 @@ if (isset($taikhoan) && $taikhoan != 0) {
                             </tbody>
                         </table>
                         <p class="tien" style="color: red;
-    font-size: 16px;">Tổng thanh toán : <?= number_format($bill['total']) ?> $</p>
+    font-size: 16px;">Tổng thanh toán : <?= number_format($bill['total']) ?> đ</p>
                                     </div>
                     </div>
 

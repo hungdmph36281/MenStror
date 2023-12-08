@@ -66,7 +66,7 @@
                                                             <h5><?= $cart['name'] ?></h5>
                                                         </td>
                                                         <td class="price">
-                                                            <span><?= number_format($cart['price']) ?> $</span>
+                                                            <span><?= number_format($cart['price']) ?> đ</span>
                                                         </td>
                                                         <td class="price">
                                                             <span><?= $cart["soluong"] ?></span>
