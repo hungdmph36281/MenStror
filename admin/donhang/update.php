@@ -57,13 +57,36 @@ if (is_array($bill)) {
                                 </div>
                             </div>
 
-
-
-                            <!-- DataTales Example -->
-
-
-
                         </div>
                     </div>
 
                 </div>
+                <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var selectElement = document.querySelector('select[name="bill_satus"]');
+        var selectedValue = parseInt("<?php if (isset($bill_satus) && ($bill_satus != "")) echo $bill_satus; ?>");
+
+        // Lặp qua từng option và ẩn chúng nếu giá trị nhỏ hơn hoặc bằng giá trị đã chọn
+        for (var i = 0; i < selectElement.options.length; i++) {
+            var optionValue = parseInt(selectElement.options[i].value);
+            if (optionValue <= selectedValue) {
+                selectElement.options[i].style.display = "none";
+            }
+        }
+
+        // Lắng nghe sự kiện khi giá trị thay đổi
+        selectElement.addEventListener('change', function () {
+            var selectedValue = parseInt(this.value);
+
+            // Lặp qua từng option và ẩn chúng nếu giá trị nhỏ hơn hoặc bằng giá trị đã chọn
+            for (var i = 0; i < this.options.length; i++) {
+                var optionValue = parseInt(this.options[i].value);
+                if (optionValue <= selectedValue) {
+                    this.options[i].style.display = "none";
+                } else {
+                    this.options[i].style.display = "block";
+                }
+            }
+        });
+    });
+</script>

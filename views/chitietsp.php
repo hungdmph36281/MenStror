@@ -59,6 +59,26 @@
 		height: 100%;
 	}
 
+	.size_selector {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.size_selector label {
+    margin-right: 10px;
+}
+
+.size_selector select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-danger {
+    margin: 0 0 0 20px;
+    padding: 6px;
+}
 
 	/* ... (previous styles remain unchanged) ... */
 </style>
@@ -180,28 +200,6 @@
 				</div>
 			</div>
 		</div>
-<<<<<<< HEAD
-		<!-- <div>
-			<iframe src="views/binhluan.php?act=idpro=<?=$id?>" width="100%" height="200px" frameborder="0"></iframe>
-		</div> -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-						<script>
-						$(document).ready(function() {
-
-							$("#bl").load("views/binhluan.php", {
-								idpro: <?=$id?>
-							});
-
-
-						});
-						</script>
-						<div class="mb" id="bl">
-
-
-						</div>
-=======
->>>>>>> 1dfc7c84d1827435ac8c9f990283f311af7346cd
 		<div class="row">
 			<div class="col">
 

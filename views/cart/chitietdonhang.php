@@ -26,7 +26,7 @@
                         <div class="table-responsive">
 
                             <div class="thongtin">
-                                <h3 class="page-title">Thông Tin Khách Hàng</h3>
+                                <h3 class="page-title">Chi tiết hóa đơn</h3>
                                 <p>Người đặt hàng : <?= $taikhoan['user'] ?></p>
                                 <p>Số điện thoại : <?= $taikhoan['tel'] ?></p>
                                 <p>Địa chỉ : <?= $taikhoan['address'] ?></p>

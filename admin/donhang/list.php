@@ -60,7 +60,7 @@
                                 <td><?=$bill['id']?></td>
                                 <td><?=$kh['user']?><br><?=$kh['email']?><br><?=$kh['tel']?><br><?=$kh['address']?></td>
                                 <td><?=$countsp?></td>
-                                <td><?=number_format($bill['total'])?> $</td>
+                                <td><?=number_format($bill['total'])?> đ</td>
                                 <td><?=$ttdh?></td>
                                 <td>
                                     <?=
