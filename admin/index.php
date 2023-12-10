@@ -127,14 +127,14 @@ if (isset($_GET['act'])) {
             $listsanpham = loadall_sanpham();
             include "sanpham/list.php";
             break;
-            case 'listtk':
-                $listthongke =loadall_thongke();
-                include "thongke/listthongke.php";
-                break;  
-            case 'bieudo':
-                $listthongke =loadall_thongke();
-                include "thongke/bieudo.php";
-                break; 
+        case 'listtk':
+            $listthongke = loadall_thongke();
+            include "thongke/listthongke.php";
+            break;
+        case 'bieudo':
+            $listthongke = loadall_thongke();
+            include "thongke/bieudo.php";
+            break;
         case 'dskh':
             $listtaikhoan = loadall_taikhoan();
             include "taikhoan/list.php";
@@ -199,11 +199,15 @@ if (isset($_GET['act'])) {
             // include "donhang/list.php";
             break;
         default:
-            include "home.php";
+            echo "<script>
+        window.location.href='index.php?act=bieudo';
+    </script>";
             break;
     }
 } else {
-    include "home.php";
+    echo "<script>
+    window.location.href='index.php?act=bieudo';
+</script>";
 }
 
 

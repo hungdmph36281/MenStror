@@ -47,6 +47,12 @@
   .chartjs-render-monitor .bar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+  #myChart {
+    width: 850px;
+    height: 400px; /* Adjust the height as needed */
+
+    margin: 0 auto;
+  }
 
   /* Thêm kiểu hover cho thanh xấp xỉ */
   .chartjs-render-monitor .bar:hover {

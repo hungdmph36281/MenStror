@@ -159,7 +159,7 @@
                             <li class="menu-title"><span> Quản lý </span></li>
 
                             <li>
-                                <a href="javascript: void(0);">
+                                <a href="index.php">
                                     <i class="la la-dashboard"></i>
                                     <span class="badge badge-info badge-pill float-right"></span>
                                     <span> Trang tổng quan </span>
@@ -229,7 +229,7 @@
                                 </a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="index.php?act=listbl">Danh sách bình luận</a>
+                                        <a href="">Danh sách bình luận</a>
                                     </li>
                                 </ul>   
                             </li>
