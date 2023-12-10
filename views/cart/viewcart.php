@@ -53,7 +53,6 @@
                                             <input style="padding :0px 8px; height:30px;" class="btn-info" type="submit" name="updatecart" value="Cập nhật">
 
                                         </div>
-
                                     </form>
 
                                 </td>
@@ -105,6 +104,18 @@
             window.location.href = "index.php?act=deletecart&idcart=" + itemId;
         }
     }
+</script>
+<script>
+    document.querySelectorAll(".quantity").forEach(function (quantityInput) {
+        quantityInput.addEventListener("change", function () {
+            if (this.value < 1) {
+                this.value = 1;
+            } else if (this.value > 10) {
+                alert("Vượt quá giới hạn số lượng (tối đa 10)");
+                this.value = 10;
+            }
+        });
+    });
 </script>
 
 

@@ -296,6 +296,36 @@
 </div>
 
 <!-- Newsletter -->
+<script>
+    let tang = document.querySelector(".buttontang");
+    let giam = document.querySelector(".buttongiam");
+    let quantity = document.querySelector("#quantity");
+
+    tang.onclick = () => {
+        quantity.value++;
+        checkQuantityLimit();
+    }
+
+    giam.onclick = () => {
+        quantity.value--;
+        if (quantity.value <= 0) {
+            quantity.value = 1;
+        }
+        checkQuantityLimit();
+    }
+
+    quantity.oninput = () => {
+        checkQuantityLimit();
+    }
+
+    function checkQuantityLimit() {
+        let maxQuantity = 10; // Số lượng tối đa cho phép
+        if (quantity.value > maxQuantity) {
+            alert("Vượt quá giới hạn số lượng");
+            quantity.value = maxQuantity;
+        }
+    }
+</script>
 
 
 <script>

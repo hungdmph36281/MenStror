@@ -148,20 +148,29 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             }
             include "./views/cart/viewcart.php";
             break;
-        case 'updatecart':
-            if (isset($_POST["updatecart"])) {
-                $fl = 0;
-                for ($i = 0; $i < sizeof($_SESSION['mycart']); $i++) {
-
-                    if ($_SESSION['mycart'][$i][0] == $_GET["id"]) {
-                        $fl = 1;
-                        $_SESSION['mycart'][$i][4] = $_POST['soluong'];
-                        break;
+            case 'updatecart':
+                if (isset($_POST["updatecart"])) {
+                    $fl = 0;
+                    $updatedQuantity = intval($_POST['soluong']);
+            
+                    // Ensure the updated quantity is within the allowed range (1 to 15)
+                    if ($updatedQuantity < 1) {
+                        $updatedQuantity = 1;
+                    } elseif ($updatedQuantity > 10) {
+                        $updatedQuantity = 10;
+                    }
+            
+                    for ($i = 0; $i < sizeof($_SESSION['mycart']); $i++) {
+                        if ($_SESSION['mycart'][$i][0] == $_GET["id"]) {
+                            $fl = 1;
+                            $_SESSION['mycart'][$i][4] = $updatedQuantity;
+                            break;
+                        }
                     }
                 }
-            }
-            include "./views/cart/viewcart.php";
-            break;
+                include "./views/cart/viewcart.php";
+                break;
+            
         case 'deletecart':
             if (isset($_GET['idcart'])) {
                 array_splice($_SESSION['mycart'], $_GET['idcart'], 1);

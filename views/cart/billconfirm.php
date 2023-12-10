@@ -107,7 +107,6 @@ if (isset($taikhoan) && $taikhoan != 0) {
                                         <td class="price">
                                             <span><?= $cart["soluong"] ?></span>
                                         </td>
-
                                     </tr>
 
 
@@ -118,10 +117,10 @@ if (isset($taikhoan) && $taikhoan != 0) {
                         </table>
                         <p class="tien" style="color: red;
     font-size: 16px;">Tổng thanh toán : <?= number_format($bill['total']) ?> đ</p>
-                                    </div>
                     </div>
+                </div>
 
-                    <!-- <div class="col-12 col-lg-10">
+                <!-- <div class="col-12 col-lg-10">
                     <div class="cart-summary">
                         <h5>Tổng Thanh Toán : <?= number_format($tong) ?> đ</h5>
                         <h5>Miễn phí vận chuyển</h5>
@@ -129,9 +128,9 @@ if (isset($taikhoan) && $taikhoan != 0) {
                        
                     </div>
                 </div> -->
-                </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- ##### Main Content Wrapper End ##### -->
 
